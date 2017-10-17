@@ -1,0 +1,26 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r, echo=FALSE, message=FALSE}
+rm( list = ls()); cat("\014")  # Clear environment
+#install.packages('dplyr')
+library(dplyr)
+```
+```{r, echo=FALSE, message=FALSE}
+education <- read.csv('data/EDSTATS_Country.csv')
+gdp <- read.csv('data/gdp2012.csv', skip=4, col.names= c('country.code', 'rank', 'NA',  'country.name', 'gdp', 'NA2', 'NA3', 'NA4', "NA5", 'NA6'))
+names(education) = sapply(names(education), tolower)
+NA_rows <- sapply(gdp['gdp'], length) >= 2
+gdp = gdp[NA_rows, grepl('^[^NA]{2}.*', names(gdp))]
+make_num <- function(num.str){as.integer(sub('[^0-9]', '', num.str)) * 1000000 }
+gdp['gdp'] <- sub('[^0-9]', '', gdp['gdp'])
+#gdp['gdp'] = sapply(gdp['gdp'], make_num)
+head(gdp)
+#head(education)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
