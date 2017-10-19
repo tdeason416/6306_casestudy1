@@ -1,5 +1,5 @@
 rm( list = ls()); cat("\014")  # Clear environment
-#install.packages('dplyr')
+install.packages('dplyr')
 library(dplyr)
 library(stringr)
 
@@ -13,7 +13,8 @@ gdp$country.name <- as.character(gdp$country.name)
 # Convert GDP numbers to integers/NA
 clean.gdp <-(lapply(gdp['gdp'], gsub, pattern = ',', replacement='')) # remove commas from the gdp numbers. 
 gdp$gdp <- clean.gdp$gdp
-gdp <- subset(gdp, subset = country.code !='') # Remove rows without country codes
+#gdp <- subset(gdp, subset = country.code !='') # Remove rows without country codes..Edited by LuCheng10/18
+gdp <- subset(gdp, subset = (rank !='' & country.code !=''))  # remove rows without contry codes and rank..Edited by LuCheng 10/18 
 gdp$gdp <- type.convert(gdp$gdp, na.strings = c('..', '')) # Convert to integer type or NA if data not available.
 
 # Convert GDP rankings to integers
