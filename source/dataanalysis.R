@@ -4,12 +4,11 @@
 ## 4	Plot the GDP for all of the countries. Use ggplot2 to color your plot by Income Group.
 ## 5	Cut the GDP ranking into 5 separate quantile groups. Make a table versus Income.Group. How many countries are Lower middle income but among the 38 nations with highest GDP?
 
-## dataset we use to analize.
-
-# use only columns country.code, rank, gdp and Income.Group
+# use only columns country.code, counry.name, rank, gdp and Income.Group
 merged.data.sub<-merged.data[,c("country.code","country.name","rank","gdp","Income.Group")]
 
 ## 1  Merge the data based on the country shortcode. See how many of the IDs match;
+merged.data <- merge.data.frame(x = gdp, y = education, all = FALSE, by = 'country.code' )  # Contains only countries that appeared in both datasets
 nrow(merged.data)
 #[1] 189
 
