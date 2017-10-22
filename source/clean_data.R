@@ -1,5 +1,6 @@
 rm( list = ls()); cat("\014")  # Clear environment
-install.packages('dplyr')
+#install.packages('dplyr')
+#install.packages('stringr')
 library(dplyr)
 library(stringr)
 
