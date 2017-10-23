@@ -22,7 +22,6 @@ gdp$gdp <- type.convert(gdp$gdp, na.strings = c('..', '')) # Convert to integer 
 gdp$rank <- as.character(gdp$rank)
 gdp$rank <- type.convert(gdp$rank, na.strings = c(''))
 
-
-all.merged.data <- merge.data.frame(x = gdp, y = education, all = TRUE, by = 'country.code' )
 merged.data <- merge.data.frame(x = gdp, y = education, all = FALSE, by = 'country.code' )  # Contains only countries that appeared in both datasets
-all.merged.data <- all.merged.data[order(all.merged.data$rank, na.last = TRUE),]
+merged.data <- droplevels(merged.data) # Remove unused levels from factors
+
