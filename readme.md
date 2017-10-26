@@ -90,7 +90,7 @@ ggplot(merged.data.sub, aes(x=rank, y=gdp)) +
         plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="6306_case_study_rmd_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src='images/gdp.png' style="display: block; margin: auto;" />
 
 ```r
 ggsave('images/gdp.png')
@@ -110,7 +110,7 @@ ggplot(merged.data.sub, aes(x=rank, y=log10(gdp))) +
         plot.title = element_text(hjust = 0.5))
 ```
 
-<img src="6306_case_study_rmd_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src='images/loggdp.png' style="display: block; margin: auto;" />
 
 ```r
 ggsave('images/loggdp.png')
