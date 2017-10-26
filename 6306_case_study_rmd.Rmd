@@ -47,8 +47,6 @@ We can see that members of the OECD are generally higher ranked than non-members
 
 * Scatter-plot of GDP for all countries, colors grouped by Income.Group
 ```{r, echo=TRUE, message=TRUE, fig.align='center'}
-## GDP converted to log10 scale for better data visualization
-merged.data.sub$loggdp <- log10(merged.data.sub$gdp * 1000000)
 ggplot(merged.data.sub, aes(x=rank, y=gdp)) + 
   # ?Draw lines in same group. colour, group both depend on Income.Group
   # Set points. colour depends on Income.Group
@@ -63,6 +61,8 @@ ggsave('images/gdp.png')
 
 This scatter-plot confirms the previous observation, OECD members generally have higher GDPs than non members. Not only that, it illustrates that high income non-OECD members have lower GDP than some countries with lower incomes. At this scale however, it is difficult to discern the differences in income between most countries because of extremely large outliers. We will therefore examine log-transformed data. 
 ```{r, echo=TRUE, message=FALSE, fig.align='center'}
+## GDP converted to log10 scale for better data visualization
+merged.data.sub$loggdp <- log10(merged.data.sub$gdp * 1000000)
 ggplot(merged.data.sub, aes(x=rank, y=log10(gdp))) + 
   # Draw lines in same group. colour, group both depend on Income.Group
   # Set points. colour depends on Income.Group
