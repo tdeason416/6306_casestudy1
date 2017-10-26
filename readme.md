@@ -24,8 +24,4 @@ Examine GDP's of countries across the world and the relationship between a count
 
 ## Project Contents
 >* complete project with code is in 6306_case_study_rmd.md
-=======
->* complete project with code is in 6306_case_study.RMD
 
-
->>>>>>> 5e239ee74e2a90a9cea34b7c7d30d3b6b53709b9
