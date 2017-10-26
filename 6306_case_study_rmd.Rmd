@@ -16,7 +16,7 @@ library("ggplot2")
 Introduction:
 We are living in an increasingly global world. With the rapid development of technology in the past century, we have gone from countless small, mostly isolated populations to one large, connected population on the global scale. With technological and scientific development came economic and population growth on a global scale. Still, countries underwent different levels of growth. We will be comparing the GDP's of several countries and examine some factors that are related to GDP. 
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=TRUE, message=FALSE}
 # generates clean data frames merged.data from R.
 source('source/clean_data.R')
 merged.data.sub <- merged.data[,c("country.code","country.name","rank","gdp","Income.Group")]
@@ -27,7 +27,7 @@ nrow(merged.data)
 ```
 We have complete GDP data (Raw GDP and Income Group) for 189 different countries in the world. 
 
-```{r, echo=TRUE, message=FALSE}
+```{r, echo=TRUE, message=TRUE}
 order.data<-merged.data.sub[order(merged.data.sub$gdp),]
 order.data[13,]$country.name
 ```
@@ -46,7 +46,7 @@ print(hiNonOECD)
 We can see that members of the OECD are generally higher ranked than non-members, with the average rank of members being 32.9667 and non-members having average rank of 91.91394.
 
 * Scatter-plot of GDP for all countries, colors grouped by Income.Group
-```{r, echo=TRUE, message=FALSE, fig.align='center'}
+```{r, echo=TRUE, message=TRUE, fig.align='center'}
 ## GDP converted to log10 scale for better data visualization
 merged.data.sub$loggdp <- log10(merged.data.sub$gdp * 1000000)
 ggplot(merged.data.sub, aes(x=rank, y=gdp)) + 
@@ -88,7 +88,5 @@ LMI.highGDP
 And indeed there are 5 Lower middle income countries in the top fifth quantile: China, Egypt, Indonesia, India, and Thailand.
 
 ## Conclusion
-
-## Conslusion
 
 * Based on our review of how incomes are classified, it appears that many lower income countries are rated as middle income, and some upper income countries are classified as middle income.  Based on the chart above.  This is probably because groupings are based on per-capita GDP, and not overall GDP; this shows it is possible for a country to be very high GDP, but still be categorized as low income, but only if the country has a very large population.
