@@ -13,6 +13,8 @@ Examine GDP's of countries across the world and the relationship between a count
 ## Project Contents
 * 6306_case_study.Rmd - Contains code needed with comments needed to generate files
 * data(folder)
+* 6306_case_study.Rproj - enviroment parwmeters for project.
+* 6306_case_study.html - web browser rendered project output.
 >* EDSTATS_Country.csv - contains relative statistics on all countries 
 >* gdp2012.csv - contains the GDP of all countries in 2012
 * source(folder)
