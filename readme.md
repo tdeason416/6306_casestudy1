@@ -22,8 +22,9 @@ Examine GDP's of countries across the world and the relationship between a count
 >* loggdp.png - contains log_10 transformed gdp data for all countries ordered by rank and colored by income group
 <<<<<<< HEAD
 
-## Project Contents
 >* complete project with code is in 6306_case_study_rmd.md
+
+## Project Overview
 
 Introduction:
 We are living in an increasingly global world. With the rapid development of technology in the past century, we have gone from countless small, mostly isolated populations to one large, connected population on the global scale. With technological and scientific development came economic and population growth on a global scale. Still, countries underwent different levels of growth. We will be comparing the GDP's of several countries and examine some factors that are related to GDP. 
