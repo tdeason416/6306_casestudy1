@@ -112,10 +112,10 @@ LMI.highGDP
 
 |      country.code  |   country.name    | rank  |   gdp    |
 |--------------------|-------------------|-------|----------|
-|34           CHN    |         China     |     2 |  8227103 |
+|*34*           *CHN*    |         *China*     |     *2* |  *8227103* |
 |51           EGY    |  Egypt, Arab Rep. |    38 | 262832   | 
 |77           IDN    |    Indonesia      |   16  | 878043   |
-|78           IND    |     India         |  10   | 1841710  |
+|*78*           *IND*    |     India         |  10   | *1841710*  |
 |165          THA    |     Thailand      |  31   | 365966   |
 
 
