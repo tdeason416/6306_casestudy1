@@ -8,16 +8,15 @@
 * Travis Deason
 
 ## Project Contents
-* 6306_case_study.Rmd - Contains code needed to generate files
-* 6306_case_study_rmd.md - Contains output, analysis and code
-* data:
+* 6306_case_study.Rmd - Contains code needed with comments needed to generate files
+* data(folder)
 >* EDSTATS_Country.csv - contains relative statistics on all countries 
 >* gdp2012.csv - contains the GDP of all countries in 2012
-* source:
+* source(folder)
 >* clean_data.R - code needed to tidy and convert the data from data folder into usable dataframes
-* images:
-*> gdp.png - contains gdp data for all countries ordered by rank and color grouped by income group
-*> loggdp.png - contains log_10 transformed gdp data for all countries ordered by rank and colored by income group
+* images(folder)
+>* gdp.png - contains gdp data for all countries ordered by rank and color grouped by income group
+>* loggdp.png - contains log_10 transformed gdp data for all countries ordered by rank and colored by income group
 
 ## Project Contents
 >* complete project with code is in 6306_case_study.RMD
