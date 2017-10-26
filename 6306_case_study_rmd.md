@@ -15,7 +15,7 @@ nrow(merged.data)
 ```
 ## [1] 189
 ```
-We have complete GDP data (Raw GDP and Income Group) for 189 different countries in the world. 
+We have complete GDP data (Raw GDP and Income Group) for 189 different countries in the world. We will organize the data in descending order by GDP.
 
 
 ```r
@@ -56,7 +56,6 @@ We can see that members of the OECD are generally higher ranked than non-members
 
 ```r
 ## GDP converted to log10 scale for better data visualization
-merged.data.sub$loggdp <- log10(merged.data.sub$gdp * 1000000)
 ggplot(merged.data.sub, aes(x=rank, y=gdp)) + 
   # ?Draw lines in same group. colour, group both depend on Income.Group
   # Set points. colour depends on Income.Group
@@ -93,7 +92,7 @@ ggplot(merged.data.sub, aes(x=rank, y=log10(gdp))) +
 ```r
 ggsave('images/loggdp.png')
 ```
-Looking at the log_10(GDP), it becomes more clear that some high income non-OECD members have lower GDPs than lower income countries. Another interesting observation is that many of the lowest GDP countries are lower middle income or upper middle income, while many low income countries are in the median of income. We even see some lower middle income countries with very high GDPs.
+Looking at the log_10(GDP), it becomes more clear that some high income non-OECD members have lower GDPs than lower income countries. Another interesting observation is that many of the lowest GDP countries are lower middle income or upper middle income, while many low income countries are in the median of income. We even see some lower middle income countries with very high GDPs. We can split the data into 5 quantiles by GDP, and look at the income-group composition of each of these quantiles.
 
 
 ```r
@@ -134,6 +133,6 @@ LMI.highGDP
 ```
 And indeed there are 5 Lower middle income countries in the top fifth quantile: China, Egypt, Indonesia, India, and Thailand.
 
-## Conslusion
+## Conclusion
 
 * Based on our review of how incomes are classified, it appears that many lower income countries are rated as middle income, and some upper income countries are classified as middle income.  Based on the chart above.  This is probably because groupings are based on per-capita GDP, and not overall GDP; this shows it is possible for a country to be very high GDP, but still be categorized as low income, but only if the country has a very large population.
