@@ -20,7 +20,6 @@ Examine GDP's of countries across the world and the relationship between a count
 * images(folder)
 >* gdp.png - contains gdp data for all countries ordered by rank and color grouped by income group
 >* loggdp.png - contains log_10 transformed gdp data for all countries ordered by rank and colored by income group
-<<<<<<< HEAD
 
 >* complete project with code is in 6306_case_study_rmd.md
 
