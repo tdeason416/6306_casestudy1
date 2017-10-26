@@ -87,8 +87,6 @@ LMI.highGDP
 ```
 And indeed there are 5 Lower middle income countries in the top fifth quantile: China, Egypt, Indonesia, India, and Thailand.
 
-## Conclusion
-
 ## Conslusion
 
 * Based on our review of how incomes are classified, it appears that many lower income countries are rated as middle income, and some upper income countries are classified as middle income.  Based on the chart above.  This is probably because groupings are based on per-capita GDP, and not overall GDP; this shows it is possible for a country to be very high GDP, but still be categorized as low income, but only if the country has a very large population.
