@@ -16,7 +16,7 @@ library("ggplot2")
 Introduction:
 We are living in an increasingly global world. With the rapid development of technology in the past century, we have gone from countless small, mostly isolated populations to one large, connected population on the global scale. With technological and scientific development came economic and population growth on a global scale. Still, countries underwent different levels of growth. We will be comparing the GDP's of several countries and examine some factors that are related to GDP. 
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=TRUE, message=FALSE}
 # generates clean data frames merged.data from R.
 source('source/clean_data.R')
 merged.data.sub <- merged.data[,c("country.code","country.name","rank","gdp","Income.Group")]
@@ -27,7 +27,7 @@ nrow(merged.data)
 ```
 We have complete GDP data (Raw GDP and Income Group) for 189 different countries in the world. We will organize the data in descending order by GDP.
 
-```{r, echo=TRUE, message=FALSE}
+```{r, echo=TRUE, message=TRUE}
 order.data<-merged.data.sub[order(merged.data.sub$gdp),]
 order.data[13,]$country.name
 ```
@@ -46,8 +46,7 @@ print(hiNonOECD)
 We can see that members of the OECD are generally higher ranked than non-members, with the average rank of members being 32.9667 and non-members having average rank of 91.91394.
 
 * Scatter-plot of GDP for all countries, colors grouped by Income.Group
-```{r, echo=TRUE, message=FALSE, fig.align='center'}
-## GDP converted to log10 scale for better data visualization
+```{r, echo=TRUE, message=TRUE, fig.align='center'}
 ggplot(merged.data.sub, aes(x=rank, y=gdp)) + 
   # ?Draw lines in same group. colour, group both depend on Income.Group
   # Set points. colour depends on Income.Group
@@ -62,6 +61,8 @@ ggsave('images/gdp.png')
 
 This scatter-plot confirms the previous observation, OECD members generally have higher GDPs than non members. Not only that, it illustrates that high income non-OECD members have lower GDP than some countries with lower incomes. At this scale however, it is difficult to discern the differences in income between most countries because of extremely large outliers. We will therefore examine log-transformed data. 
 ```{r, echo=TRUE, message=FALSE, fig.align='center'}
+## GDP converted to log10 scale for better data visualization
+merged.data.sub$loggdp <- log10(merged.data.sub$gdp * 1000000)
 ggplot(merged.data.sub, aes(x=rank, y=log10(gdp))) + 
   # Draw lines in same group. colour, group both depend on Income.Group
   # Set points. colour depends on Income.Group
