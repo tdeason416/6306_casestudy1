@@ -59,12 +59,12 @@ Looking at the log_10(GDP), it becomes more clear that some high income non-OECD
 |   Low GDP         |                   2  |               0   |      11     |        16           |        9           |
                   
 
-|      country.code  |   country.name rank |   gdp   |
-|----------------------------------------------------|
-|34           CHN                 China    2 8227103
-|51           EGY      Egypt, Arab Rep.   38  262832
-|77           IDN        Indonesia   16  878043
-|78           IND         India   10 1841710
-|165          THA         Thailand   31  365966
+|      country.code  |   country.name    | rank  |   gdp    |
+|--------------------|-------------------|-------|----------|
+|34           CHN    |         China     |     2 |  8227103 |
+|51           EGY    |  Egypt, Arab Rep. |    38 | 262832   | 
+|77           IDN    |    Indonesia      |   16  | 878043   |
+|78           IND    |     India         |  10   | 1841710  |
+|165          THA    |     Thailand      |  31   | 365966   |
 ```
 And indeed there are 5 Lower middle income countries in the top fifth quantile: China, Egypt, Indonesia, India, and Thailand.
